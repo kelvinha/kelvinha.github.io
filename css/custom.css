@@ -1,0 +1,219 @@
+.grad {
+    /* background-image: linear-gradient(90deg, #363062, #4d4c7d); */
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    animation-direction: alternate;
+}
+
+@keyframes example {
+
+    0% {
+        background-color: whitesmoke;
+    }
+
+    50% {
+        background-color: gainsboro;
+    }
+
+    100% {
+        background-color: gray;
+    }
+}
+
+body {
+    background-color: #011531;
+    font-family: 'Poppins';
+    scroll-behavior: smooth;
+}
+
+.hero-img {
+    opacity: 0;
+    /* transform: translate(0, -50px); */
+    transform: scale(0);
+    transition: 2s;
+}
+
+.hero-img.hero-muncul {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.hero-img2 {
+    opacity: 0;
+    /* transform: translate(0, -50px); */
+    transform: scale(0);
+    transition: 1.5s;
+}
+
+.hero-img2.hero-muncul {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.bg-kph {
+    background-color: #011531;
+    /* background-color: #FFDE59; */
+    color: black;
+}
+
+.btn-kph {
+    background-color: #011531;
+    color: #FFDE59;
+    border: 2px solid #FFDE59;
+    padding: 5px 30px 5px 30px;
+    font-size: 16px;
+    /* font-weight: bold; */
+}
+
+.btn-warning {
+    padding: 5px 30px 5px 30px;
+}
+
+.hero {
+    min-height: 600px;
+
+}
+
+.jumbotron .rounded-circle {
+    width: 20%;
+    border: 5px solid gray;
+    scroll-behavior: smooth;
+}
+
+hr {
+    width: 250px;
+    border-top: 5px solid;
+    color: #FFDE59;
+}
+
+.sp {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.jumbotron {
+    background-image: url('../images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.jumbotron h1,
+.jumbotron h4 {
+    color: white;
+}
+
+.SAT {
+    min-height: 600px;
+}
+
+.portofolio {
+    background-image: url('../images/Group\ 9.png');
+    color: white;
+    background-size: cover;
+    min-height: 600px;
+    background-color: #02275c
+}
+
+
+.portofolio .card {
+    opacity: 0;
+    transform: translate(0, -40px);
+}
+
+.portofolio .card.muncul {
+    opacity: 1;
+    transition: .5s;
+    transform: translate(0, 0);
+}
+
+.pKiri,
+.pKanan {
+    opacity: 0;
+    transform: translate(-50px, 0);
+    transition: 1s;
+}
+
+.pKanan {
+    transform: translate(50px, 0);
+}
+
+.pKiri.pMuncul,
+.pKanan.pMuncul {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+@media only screen and (max-width: 1024px) {
+    .sp {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    footer {
+        margin-top: 10px;
+    }
+
+    .img-thumbnail {
+        margin-bottom: 20px;
+    }
+
+    .respon {
+        margin-top: 10px;
+    }
+
+    .jumbotron .rounded-circle {
+        width: 25%;
+    }
+
+}
+
+.bg-border-radius {
+    margin: -200px auto 0;
+    /* width: 1000px; */
+    /* height: 800px; */
+    overflow: hidden;
+    border-radius: 0 0 0% 50%;
+    background-image: linear-gradient(-90deg, #FFDE59, #011531);
+}
+
+h1.animate {
+    border-right: solid 5px rgba(255, 255, 255, .75);
+    white-space: nowrap;
+    overflow: hidden;
+    text-transform: uppercase;
+    color: #FFDE59;
+}
+
+/* Animation */
+h1.animate {
+    animation: animated-text 2s linear 1s 1 normal both,
+        animated-cursor 600ms linear infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 490px;
+    }
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor {
+    from {
+        border-right-color: #FFDE59;
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
